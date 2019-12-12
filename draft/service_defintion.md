@@ -2,6 +2,8 @@
 
 # Robot Raconteur Service Definitions
 
+Version 0.9.2
+
 http://robotraconteur.com
 
 http://github.com/robotraconteur
@@ -672,6 +674,7 @@ The following rules must be verified after a *Service Definition* has been parse
 * Block scope names including the names of constants, fields, members, and enumeration values must be unique within the block. They are not required to be unique against service definition scope names.
 * Modifiers are valid and are unique, or have unique parameters if the modifier name is repeated. Unknown modifiers should be ignored and a warning generated.
 * All imported service definitions and service definition types are available
+* Imported service definitions do not have greater `stdver`
 * All types are valid and follow the rules for each type and usage
 * All implemented object types exist, and the implementing object exactly implements each member and constant of the implemented object. No implicit inheritance is assumed.
 * All members and fields are valid
@@ -693,5 +696,4 @@ Some conventions are recommended for *Service Definition* file formatting:
 * Line continuations should be indented four spaces more than the line before the continuation. Additional line continuations should match the indentation of the first continuation.
 * Comments should match the indentation of the relevant declaration
 
-These rules are loosely based on Python PEP 8
-
+These conventions are loosely based on Python PEP 8
