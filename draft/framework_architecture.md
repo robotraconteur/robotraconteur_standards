@@ -8,7 +8,7 @@ http://github.com/robotraconteur
 
 Copyright &copy; 2019 Wason Technology, LLC
 
-*Robot Raconetur is a communication framework designed for use with robotics, automation, building control, and internet of things applications.*
+*Robot Raconteur is a communication framework designed for use with robotics, automation, building control, and internet of things applications.*
 
 ## Abstract
 
@@ -191,7 +191,7 @@ Messages are structures used to communicate between nodes using "Endpoints" and 
 * Integer arrays: `int8`, `int16`, `int32`, `int64`
 * Unsigned integer arrays: `uint8`, `uint16`, `uint32`, `uint64`
 * Complex floating point arrays: `csingle` (64-bit complex floating point), `cdouble` (128-bit complex floating point)
-* Number multi-dimensional arrays
+* Numeric multi-dimensional arrays
 * Structures: Defined in "Service Definitions"
 * Maps with `int32` and `string` keys
 * Lists

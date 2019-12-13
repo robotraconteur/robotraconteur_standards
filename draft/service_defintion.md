@@ -10,7 +10,7 @@ http://github.com/robotraconteur
 
 Copyright &copy; 2019 Wason Technology, LLC
 
-*Robot Raconetur is a communication framework designed for use with robotics, automation, building control, and internet of things applications.*
+*Robot Raconteur is a communication framework designed for use with robotics, automation, building control, and internet of things applications.*
 
 ## Abstract
 
