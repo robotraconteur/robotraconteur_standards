@@ -6,7 +6,7 @@ http://robotraconteur.com
 
 http://github.com/robotraconteur
 
-Copyright &copy; 2019 Wason Technology, LLC
+Copyright &copy; 2020 Wason Technology, LLC
 
 *Robot Raconteur is a communication framework designed for use with robotics, automation, building control, and internet of things applications.*
 
@@ -182,6 +182,7 @@ Messages are structures used to communicate between nodes using "Endpoints" and 
 * The ServicePath, a string representing the "Service Object" that the entry is associated with
 * The MemberName, a string representing the member within the "Service Object" the entry is associated with
 * The RequestID, a number used to match up a response message with the request
+* The ErrorType, a numeric code representing an error condition, or zero.
 * Requested QoS for the message (assumed reliable unless specified)
 * Data and parameters in the form of a list of "Message Elements"
 

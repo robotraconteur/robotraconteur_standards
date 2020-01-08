@@ -1,6 +1,6 @@
 <p align="center"><img src="../images/RRheader2.jpg"></p>
 
-# Robot Raconteur Service Definitions
+# Robot Raconteur Service Definition Standard
 
 Version 0.9.2
 
@@ -8,7 +8,7 @@ http://robotraconteur.com
 
 http://github.com/robotraconteur
 
-Copyright &copy; 2019 Wason Technology, LLC
+Copyright &copy; 2020 Wason Technology, LLC
 
 *Robot Raconteur is a communication framework designed for use with robotics, automation, building control, and internet of things applications.*
 
@@ -18,7 +18,7 @@ Copyright &copy; 2019 Wason Technology, LLC
 
 ## Introduction
 
-Robot Raconteur uses a highly specialized object and data model to implement a Remote Procedure Call (RPC) framework. (The object and data models are discussed in [Robot Raconteur Object Model](object_protocol.md) and [Robot Raconteur Data Model](data_model.md).) The framework allows for a service to define object and data types, extending the capabilities of Robot Raconteur. It also allows for these object and data types to be shared between services by `importing` types. These types are defined in plain text *Service Definition* files using a simple Interface Definition Language (IDL). This IDL allows for defining variations of the following types:
+Robot Raconteur uses a highly specialized object and data model to implement a Remote Procedure Call (RPC) framework. (The object and data models are discussed in [Robot Raconteur Object Protocol Specification](object_protocol.md) and [Robot Raconteur Value Types Specification](value_types.md).) The framework allows for a service to define object and data types, extending the capabilities of Robot Raconteur. It also allows for these object and data types to be shared between services by `importing` types. These types are defined in plain text *Service Definition* files using a simple Interface Definition Language (IDL). This IDL allows for defining variations of the following types:
 
 * `constant`
 * `enum`
@@ -67,7 +67,7 @@ Lines beginning with `#` shall be considered a comment. Comments must begin at t
 
 The following keywords are reserved:
 
-`object` `end` `option` `service` `struct` `import` `implements` `field` `property` `function` `event` `objref` `pipe` `callback` `wire` `memory` `void` `int8` `uint8` `int16` `uint16` `int32` `uint32` `int64` `uint64` `single` `double` `varvalue` `varobject` `exception` `using` `constant` `enum` `pod` `namedarray` `cdouble` `csingle` `bool` `stdver`
+`object` `end` `option` `service` `struct` `import` `implements` `field` `property` `function` `event` `objref` `pipe` `callback` `wire` `memory` `void` `int8` `uint8` `int16` `uint16` `int32` `uint32` `int64` `uint64` `single` `double` `string` `varvalue` `varobject` `exception` `using` `constant` `enum` `pod` `namedarray` `cdouble` `csingle` `bool` `stdver`
 
 ## Numeric Literals
 
@@ -600,7 +600,7 @@ Pipe declarations must match the following regex:
 
     ^(?&blank)*(?'pipe'pipe(?&blank)+(?&type)(?&blank)+(?&name)(?:(?&blank)+(?&modifier_list))?)(?&blank)*$
 
-Currently used modifiers for pipes are `readonly`, `writeonly`, `unreliable`, `nolock`, and `nolockread`.
+Currently used modifiers for pipes are `readonly`, `writeonly`, `unreliable`, and `nolock`.
 
 #### Callback
 
@@ -608,7 +608,7 @@ Callback declarations must match the following regex:
 
     ^(?&blank)*(?'callback'callback(?&blank)+(?&type_voidable)(?&blank)+(?&name)\((?&blank)*(?:(?:(?&function_param)(?&blank)*,(?&blank)*)*(?&function_param))?(?&blank)*\)(?:(?&blank)+(?&modifier_list))?)(?&blank)*$
 
-Currently used modifiers for properties are `urgent` and `nolock`.
+Currently used modifiers for callbacks are `urgent`.
 
 Callbacks may not be generator functions.
 
@@ -618,7 +618,7 @@ Wire declarations must match the following regex:
 
     ^(?&blank)*(?'wire'wire(?&blank)+(?&type)(?&blank)+(?&name)(?:(?&blank)+(?&modifier_list))?)(?&blank)*$
 
-Currently used modifiers for wires are `readonly`, `writeonly`, `nolock`, and `nolockread`.
+Currently used modifiers for wires are `readonly`, `writeonly`, and `nolock`.
 
 #### Memory
 
