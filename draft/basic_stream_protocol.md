@@ -106,6 +106,42 @@ Page Contents:  Bits 47 - 0
 
 ## StreamCapabilities Requests
 
+The StreamCapabilities request provides another method to determine capabilities between two stream peers. The MemberName field of the request contains the name of a capability, and the response contains a scalar integer indicating the support level for that capability. Zero means no support, while positive integers represent the level of support for that capability. Like the StreamOp request, the RequestID and ServicePath fields are unused. Only one capabilities request may be in flight at a time.
+
+##### Request:
+
+Direction: Client to Service
+
+* EntryType: 3
+* ServicePath: *empty*
+* MemberName: The capability name
+* RequestID: 0
+* Request QoS: reliable
+* Data: *none*
+
+##### Response:
+
+Direction: Service to Client
+
+* EntryType: 4
+* ServicePath: *empty*
+* MemberName: Same as request
+* RequestID: 0
+* Request QoS: reliable
+* Data: Message element list:
+  * Element 1
+    * ElementName: "return"
+    * ElementType: 8 (uint32)
+    * Data: Scalar uint32 array of the support level for the capability
+
+Currently supported capabilities names:
+
+| Name | Expected Capabilities Levels |
+| ---  | ---                          |
+| com.robotraconteur.v2 | Stream supports Message Version 2 Serialization Format  (always >1) |
+| com.robotraconteur.v2.0 | Stream supports Message Version 2.0 Serialization Format (always >1) |
+| com.robotraconteur.v2.minor | The minor revision number of Message Version 2.0 Serialization Format (currently zero) |
+
 ## Connection Tests and Timeouts
 
 Streams must use a connection test heartbeat to detect if the stream connection has been lost. Because robotics is highly time sensitive, these heartbeats must be relatively often. If a message is not received within a certain timeout period, the connection must be closed.
