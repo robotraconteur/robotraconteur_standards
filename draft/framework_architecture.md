@@ -296,7 +296,7 @@ for two reasons: it will break down large reads and writes into smaller calls to
 
 Robot Raconteur uses URLs to create "Client Connections" to "Services". A URL has the following basic format:
 
-`URL = scheme://[authority]/[path]?[nodeid=<nodeid>&][nodename=<nodename>&]service=example_service`
+`URL = scheme://[authority]/[path]?[nodeid=<nodeid>&][nodename=<nodename>&]service=<servicename>`
 
 where the authority component may be empty, or for IP networks:
 
