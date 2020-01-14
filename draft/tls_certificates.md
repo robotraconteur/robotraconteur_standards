@@ -26,9 +26,9 @@ Robot Raconteur has a very different use case for TLS when compared to HTTPS. Si
 
 ## Node Certificates
 
-Robot Raconteur node certificates are standard X509.3 certificates. They are designed to be unusable for HTTPS to avoid any potential attack vector. The X509.3 certificate subject must only contain the `CN` attribute. The `CN` attribute must contain the magic `Robot Raconteur Node` followed by a space, and then the 128-bit UUID in bracketed 8-4-4-4-12 format. The `CN` must match the following regex:
+Robot Raconteur node certificates are standard X509.3 certificates. They are designed to be unusable for HTTPS to avoid any potential attack vector. The X509.3 certificate subject must only contain the `CN` attribute. The `CN` attribute must contain the magic `Robot Raconteur Node` followed by a space, and then the 128-bit UUID in bracketed 8-4-4-4-12 lowercase format. The `CN` must match the following regex:
 
-    ^Robot Raconteur Node \{[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}\}$
+    ^Robot Raconteur Node \{[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\}$
 
 Robot Raconteur certificates use custom extensions marked "critical". These exist to mark the certificates for use with Robot Raconteur, and to make them unusable with HTTPS or other purposes. For nodes, the extension with OID `1.3.6.1.4.1.45455.1.1.3.3` is marked critical and boolean true. The X509 full format is:
 
