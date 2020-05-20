@@ -1950,12 +1950,15 @@ The following ErrorType codes are currently defined:
 | InternalError | 21 | RobotRaconteur.InternalError | An unexpected internal error has occurred in the Robot Raconteur implementation |
 | SystemResourcePermissionDenied | 22 | RobotRaconteur.SystemResourcePermissionDenied | Permission has been denied to a system resource such as file or device |
 | OutOfSystemResource | 23 | RobotRaconteur.OutOfSystemResource | A system resource such as memory has been exhausted |
-| ResourceNotFound | 24 | RobotRaconteur.ResourceNotFound | A requested system resource was not found |
-| IOError | 25 | RobotRaconteur.IOError | A generic IO error has occurred |
-| BufferLimitViolation | 26 | RobotRaconteur.BufferLimitViolation | A buffer overrun has occurred in a transport |
-| ServiceDefinitionError | 27 | RobotRaconteur.ServiceDefinitionError | The supplied service definition failed parsing or verification |
-| OutOfRange | 28 | RobotRaconteur.OutOfRange | The supplied index was out of range for an array or list |
-| KeyNotFound | 29 | RobotRaconteur.KeyNotFound | The supplied key was not found in a map |
+| SystemResourceError | 24 | RobotRaconteur.SystemResourceError | A system resource error has occured |
+| ResourceNotFound | 25 | RobotRaconteur.ResourceNotFound | A requested system resource was not found |
+| IOError | 26 | RobotRaconteur.IOError | A generic IO error has occurred |
+| BufferLimitViolation | 27 | RobotRaconteur.BufferLimitViolation | A buffer overrun has occurred in a transport |
+| ServiceDefinitionError | 28 | RobotRaconteur.ServiceDefinitionError | The supplied service definition failed parsing or verification |
+| OutOfRange | 29 | RobotRaconteur.OutOfRange | The supplied index was out of range for an array or list |
+| KeyNotFound | 30 | RobotRaconteur.KeyNotFound | The supplied key was not found in a map |
+| InvalidConfiguration | 31 | RobotRaconteur.InvalidConfiguration | An invalid configuration was specified or encountered |
+| InvalidState | 32 | RobotRaconteur.InvalidState | An invalid state was specified or encountered |
 | RemoteError | 100 | *user defined* | An (possibly user defined) error or exception has occurred on the remote node |
 | RequestTimeout | 101 | RobotRaconteur.RequestTimeout | The request operation has timed out. Either the operation took too long or communication failed |
 | ReadOnlyMember | 102 | RobotRaconteur.ReadOnlyMember | An attempt was made to write a read-only member |
@@ -1966,6 +1969,8 @@ The following ErrorType codes are currently defined:
 | AbortOperation | 107 | RobotRaconteur.AbortOperation | Only valid for generators. Abort the current iteration |
 | OperationAborted | 108 | RobotRaconteur.OperationAborted | The current operation was aborted |
 | StopIteration | 109 | RobotRaconteur.StopIteration | Only valid for generators. Close the generator, or generator is finished |
+| OperationTimeout | 110 | RobotRaconteur.OperationTimeout | An operation did not complete in the expected time |
+| OperationCancelled | 111 | RobotRaconteur.OperationCancelled | An operation was cancelled before starting |
 | AuthenticationError | 150 | Authentication is required, or authentication failed |
 | ObjectLockedError | 151 | The requested object is locked by another user or session |
 | PermissionDenied | 152 | Permission to the requested resource was denied |
