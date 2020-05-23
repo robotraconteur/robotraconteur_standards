@@ -67,7 +67,7 @@ Lines beginning with `#` shall be considered a comment. Comments must begin at t
 
 All declarations in service definitions except for `stdver`, `import`, `using`, and `implements` may be preceded with documentation comment blocks. These blocks start with a double pound sign, `##`, and consists of multiple lines with the double pound sign. A single pound sign comment or a blank line will reset the comment block. (Blank lines may exist between the documentation block and the declaration, but comment lines clear the documentation.) Documentation comment regex:
 
-    ^[ \t]*##([ -~\t])*$
+    ^[ \t]*##([ -~\t]*)$
 
 
 ## Keywords
