@@ -63,6 +63,13 @@ Lines beginning with `#` shall be considered a comment. Comments must begin at t
 
     s/^[ \t]*#[ -~\t]*$//g
 
+### Documentation Comments
+
+All declarations in service definitions except for `stdver`, `import`, `using`, and `implements` may be preceded with documentation comment blocks. These blocks start with a double pound sign, `##`, and consists of multiple lines with the double pound sign. A single pound sign comment or a blank line will reset the comment block. (Blank lines may exist between the documentation block and the declaration, but comment lines clear the documentation.) Documentation comment regex:
+
+    ^[ \t]*##([ -~\t])*$
+
+
 ## Keywords
 
 The following keywords are reserved:
@@ -438,7 +445,7 @@ The full multi-line enumeration must match the following regex:
 
     ^(?&blank)*(?'enum'enum(?&blank)+(?&name)(?&blank)*(?&newline)+(?&blank)*(?&enum_first_value)(?:(?&blank)*,(?&blank)*(?&newline)*(?&blank)*(?&enum_value))*(?&blank)*(?&newline)+(?&blank)*end)(?&blank)*$
 
-## Modifiers
+### Modifiers
 
 *Modifiers* may optionally be applied to *structure* fields, *pod* fields, *namedarray* fields, and *object* members. A list of modifiers is declared between square brackets, separated by commas, on the same line after the declaration of the *field* or *member*. Modifiers may either be a single word, such as `readonly`, or may contain parameters between parentheses, such as `mymodifier(10,34.4,myconstant)`. Parameters must be a constant integer scalar, a constant float scalar, or the name of a constant declared in the same scope. Currently used modifier names include `readonly`, `writeonly`, `unreliable`, `urgent`, `perclient`, `nolock`, and `nolockread`.
 
