@@ -112,7 +112,7 @@ Message Elements contain values. The standard usage of message entries is discus
 | ElementTypeName      | utf-8  | varies | The ElementTypeName encoded as utf-8 string |
 | MetaData_len         | uint16 | 2      | The length of MetaData in bytes after utf-8 encoding |
 | MetaData             | utf-8  | varies | MetaData encoded as utf-8 string |
-| DataCount            | uint16 | 2      | The number of array elements or *top level* elements that follow |
+| DataCount            | uint32 | 4      | The number of array elements or *top level* elements that follow |
 
 ## Data
 
