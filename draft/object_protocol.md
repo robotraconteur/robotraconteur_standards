@@ -1338,8 +1338,6 @@ Direction: Service to Client
 
 Pipe packets are used to transmit pipe data. The packet includes the index, the packet sequence number, the packet data, and an optional flag requesting a PacketAck notification that the packet has been received. Multiple pipe packets can be stored in a single PipePacket message entry packet.
 
-Note that Message v2 and Message v3 encode *index*, *packetnumber* and *requestack* differently. See the [Robot Raconteur Message Version 2 Specification](message_v2.md) and [Robot Raconteur Message Version 3 Specification](message_v3.md) for more details. The format shown here is for Message v2. Message v3 contains the same information, but in a more efficient format.
-
 Packet numbers must begin at 0, and increment by 1 for each packet. Reliable PipeEndpoint must reorder packets if they arrive out of order. Unreliable packets deliver packets as soon as they arrive.
 
 ##### Packet:
@@ -1372,9 +1370,6 @@ Direction: Either
 #### PipePacketAck
 
 The PipePacketAck is used to notify a sending PipeEndpoint that the packet has been received. This is useful for flow control.
-
-
-Note that Message v2 and Message v3 encode *index*, *packetnumber* and *requestack* differently. See the [Robot Raconteur Message Version 2 Specification](message_v2.md) and [Robot Raconteur Message Version 3 Specification](message_v3.md) for more details. The format shown here is for Message v2. Message v3 contains the same information, but in a more efficient format.
 
 ##### Packet:
 
@@ -1524,8 +1519,6 @@ Direction: Service to Client
 
 Wire packets are used to transmit the current value. The packet contains the new value and a timestamp.
 
-Note that Message v2 and Message v3 encode the *packettime* differently. See the [Robot Raconteur Message Version 2 Specification](message_v2.md) and [Robot Raconteur Message Version 3 Specification](message_v3.md) for more details. The format shown here is for Message v2. Message v3 contains the same information, but in a more efficient format.
-
 Packet numbers must begin at 0, and increment by 1 for each packet. Reliable PipeEndpoint must reorder packets if they arrive out of order. Unreliable packets deliver packets as soon as they arrive.
 
 The epoch for *packettime* is Jan 1, 1970, 00:00 UTC. The "nanoseconds" element is always normalized to be positive and less than 1e9.
@@ -1561,9 +1554,6 @@ Direction: Either
 #### WirePeekInValue
 
 Retrieve the current InValue using a request without creating a WireConnection.
-
-Note that Message v2 and Message v3 encode the *packettime* differently. See the [Robot Raconteur Message Version 2 Specification](message_v2.md) and [Robot Raconteur Message Version 3 Specification](message_v3.md) for more details. The format shown here is for Message v2. Message v3 contains the same information, but in a more efficient format.
-
 
 ##### Request:
 
@@ -1608,8 +1598,6 @@ Direction: Service to Client
 
 Retrieve the current OutValue using a request without creating a WireConnection.
 
-Note that Message v2 and Message v3 encode the *packettime* differently. See the [Robot Raconteur Message Version 2 Specification](message_v2.md) and [Robot Raconteur Message Version 3 Specification](message_v3.md) for more details. The format shown here is for Message v2. Message v3 contains the same information, but in a more efficient format.
-
 ##### Request:
 
 Direction: Client to Service
@@ -1652,8 +1640,6 @@ Direction: Service to Client
 #### WirePokeOutValue
 
 Set the current OutValue using a request without creating a WireConnection.
-
-Note that Message v2 and Message v3 encode the *packettime* differently. See the [Robot Raconteur Message Version 2 Specification](message_v2.md) and [Robot Raconteur Message Version 3 Specification](message_v3.md) for more details. The format shown here is for Message v2. Message v3 contains the same information, but in a more efficient format.
 
 ##### Request:
 
