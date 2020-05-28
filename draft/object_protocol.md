@@ -744,7 +744,11 @@ Direction: Service to Client
 * MemberName: "RequestObjectLock"
 * RequestID: Same as request
 * Request QoS: reliable
-* Data: *empty*
+* Data: Message element list:
+  * Element 1:
+    * ElementName: "return"
+    * ElementType: 11 (string)
+    * Data: "OK" as utf-8 string
 
 
 #### ClientSessionOp(ReleaseObjectLock)
@@ -771,7 +775,11 @@ Direction: Service to Client
 * MemberName: "ReleaseObjectLock"
 * RequestID: Same as request
 * Request QoS: reliable
-* Data: *empty*
+* Data: Message element list:
+  * Element 1:
+    * ElementName: "return"
+    * ElementType: 11 (string)
+    * Data: "OK" as utf-8 string
 
 #### ClientSessionOp(RequestClientObjectLock)
 
@@ -799,7 +807,11 @@ Direction: Service to Client
 * MemberName: "RequestClientObjectLock"
 * RequestID: Same as request
 * Request QoS: reliable
-* Data: *empty*
+* Data: Message element list:
+  * Element 1:
+    * ElementName: "return"
+    * ElementType: 11 (string)
+    * Data: "OK" as utf-8 string
 
 #### ClientSessionOp(ReleaseClientObjectLock)
 
@@ -825,7 +837,11 @@ Direction: Service to Client
 * MemberName: "ReleaseClientObjectLock"
 * RequestID: Same as request
 * Request QoS: reliable
-* Data: *empty*
+* Data: Message element list:
+  * Element 1:
+    * ElementName: "return"
+    * ElementType: 11 (string)
+    * Data: "OK" as utf-8 string
 
 ### Monitor Locks
 
@@ -838,6 +854,8 @@ Monitor are lock guards for a single client thread. They operate on a single obj
 Instead of raising an error, attempts to access the members are be queued, and processed once the lock is released.
 
 Monitor locks will be held until the are released with ClientsessionOp(MonitorExit), the client connection session is closed, or the monitor times out. A typical timeout for a monitor is 15 seconds. The monitor can be renewed using the ClientSessionOp(MonitorContinueEnter) request.
+
+Return element will contain "Continue" if the monitor enter attempt should be retried.
 
 ##### Request:
 
@@ -863,7 +881,11 @@ Direction: Service to Client
 * MemberName: "MonitorEnter"
 * RequestID: Same as request
 * Request QoS: reliable
-* Data: *empty*
+* Data: Message element list:
+  * Element 1:
+    * ElementName: "return"
+    * ElementType: 11 (string)
+    * Data: "OK" or "Continue" as utf-8 string
 
 #### ClientSessionOp(MonitorContinueEnter)
 
@@ -889,7 +911,11 @@ Direction: Service to Client
 * MemberName: "MonitorContinueEnter"
 * RequestID: Same as request
 * Request QoS: reliable
-* Data: *empty*
+* Data: Message element list:
+  * Element 1:
+    * ElementName: "return"
+    * ElementType: 11 (string)
+    * Data: "OK" or "Continue" as utf-8 string
 
 #### ClientSessionOp(MonitorExit)
 
@@ -915,7 +941,11 @@ Direction: Service to Client
 * MemberName: "MonitorExit"
 * RequestID: Same as request
 * Request QoS: reliable
-* Data: *empty*
+* Data: Message element list:
+  * Element 1:
+    * ElementName: "return"
+    * ElementType: 11 (string)
+    * Data: "OK" as utf-8 string
 
 ### Service Objected Release
 
