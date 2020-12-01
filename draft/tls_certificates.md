@@ -73,7 +73,7 @@ Note `pathlen` may be a value other than one.
 
 Any additional critical extensions may result in verification failures. The absence of critical extension OID `1.3.6.1.4.1.45455.1.1.3.1` will result in verification failure.
 
-All Robot Raconteur nodes are expected to use certificates issued by Wason Technology, LLC. All nodes are expected to have the Wason Technology, LLC root certificate embedded in the software:
+All Robot Raconteur nodes are expected to use certificates issued by Wason Technology, LLC. All nodes are expected to have the two Wason Technology, LLC root certificates embedded in the software:
 
     -----BEGIN CERTIFICATE-----
     MIIFujCCA6KgAwIBAgIQDdViP0ny9X/N86KnGB9/GzANBgkqhkiG9w0BAQsFADBU
@@ -107,4 +107,37 @@ All Robot Raconteur nodes are expected to use certificates issued by Wason Techn
     C6YjQE9GeVtJlk9vpVm2FZTfsjixSuj/HhSC0KGiioSzet6e5qwDK9jlJkKJuLf5
     0IwyjKVX/DJpcRz+1wYfwHeD0oWohvs2dO6A4srDewpmtVtWVhxcbD3uS3mSgS62
     w5hECOru5bK1ZNWz2yDdlsBztP9lUqWL++rper0W
+    -----END CERTIFICATE-----
+
+    -----BEGIN CERTIFICATE-----
+    MIIFhjCCA26gAwIBAgIBATANBgkqhkiG9w0BAQsFADBWMQswCQYDVQQGEwJVUzEe
+    MBwGA1UECgwVV2Fzb24gVGVjaG5vbG9neSwgTExDMScwJQYDVQQDDB5Sb2JvdCBS
+    YWNvbnRldXIgTm9kZSBSb290IENBIDIwIBcNMjAxMTIzMDA1MDAyWhgPMjA2MDEx
+    MTMwMDUwMDJaMFYxCzAJBgNVBAYTAlVTMR4wHAYDVQQKDBVXYXNvbiBUZWNobm9s
+    b2d5LCBMTEMxJzAlBgNVBAMMHlJvYm90IFJhY29udGV1ciBOb2RlIFJvb3QgQ0Eg
+    MjCCAiIwDQYJKoZIhvcNAQEBBQADggIPADCCAgoCggIBAMhrHzVNDFqvH3HZbQG3
+    7DYTOENz/905J2uGy159MQ3HVt0Bc613ukAPDC2JGWWVoRzRCbKfIqc4jjQWuyEu
+    UhgkdM3C0m5WT9aI3uOyiZT6zj7ZCX6IpIMdcsZveP2+qiFGGF1Jq3UJK+qqWNex
+    aas6NQYNWFYo4tiMJZc/JGyfXYjkDSCdxyYUJAN0WKd4fLa43AC3lFPC7R66MCZB
+    gcPb85iP2JV1dYVaY3uYdZvfV/XtDLV9nFkOge/rbMN8cFxrxPod28PgvHKLp2qx
+    SQPK440tu8jaG+gXCA8U4wHNifSESGWGn3++gfHTSfv3B/GrL3Dl+MdwrPduQ/FL
+    oCEZf+hFFYPYf9b5oMjcYLU4JKUq3dbqGsYz1fxHLAlt76uR29JgzbQILBW1It/S
+    kBuyTeWvkTj9KVR3DmF/6zB+JVXnkExQv4aCiuP2bwmChyyGDBpqkpgv6wqgIE1e
+    pSWA4Lr2ZXzhPet8dOUwaslEvcFx17GxDIcztn0tU7SCGp9DLiIYJ5paV7Wt2orH
+    bQlQEAPou1+8OzeOhkYauxmdAtrTfHjzUPzzzdHZHeTWQCEt+0rrAPvYhIEB3M7L
+    CoD3NqC6COU0vYqE9Js5Ym6WhDt395MrO0LixSsVibivekNZXehgnlL6Vpa65AcF
+    oQhvSnCLrXNaoZsY9Wm1FH+JAgMBAAGjXTBbMA4GA1UdDwEB/wQEAwIBBjASBgNV
+    HRMBAf8ECDAGAQH/AgEBMB0GA1UdDgQWBBSFfYnMwc8jOxpZ582TyseWqvBqKjAW
+    BgwrBgEEAYLjDwEBAwEBAf8EAwEB/zANBgkqhkiG9w0BAQsFAAOCAgEANRina3nd
+    DMKo/LjozMCzEN8Plplqx0973aL+rottZdNk48HPqqdtwUXPP+Nn7YqjuLfFHpgg
+    KQJgolOzCUb6YF8DjdpqDd4vAtjhdDVsNdxZjpm+uyOAuK3e43iCalpgsDzA+kkV
+    W/1LuZ0EJIHpr3Q7diN50g+dBN2ipfKSfN0ifHqWGSxRsQ+GsEUN0CKrvnYrZutj
+    IWXAqlEv1o425c1LhMyhqzkJbrIFU11dz42TvgjT4lVuT/bpmg6FwiSyUC5i872e
+    8Vt8YWBH+VPH2degI9Zu9X5iwacUO65HdddfZoKHVNWQQxxaMqn1qefjzBez7hzC
+    rVwhvcsgRgvwyHHdkmvCCrSBG0JVZqMLE4Lrn/UXG+9Hu8OFMzSW/e9P63AzvzzV
+    2cMz+TqRdBTMiESj8VlIHoB/jnPJTVadJ9M73poPbEyOVAyP+5kctB7jmRD6J3pu
+    ibzA5npAsZjjKfCLoP4DPB5I53hSsm9s7lAsK/VT8Xsk1TOMUubHKPn1MeXsLXlF
+    6yjWI+K/FIOAQflaotxj+XSV/kQXLqEZyBwGPQ4ftSl/Hov6ebty7VHcQV7zhrON
+    lEnDZOEgHdcvlzg+ts3aIBn5wAYRZK/OmudYvsbd4R0Ta29WP5r4yAoRM+BCLabN
+    46bNZ/0uwMlOIoafDDMrzJw62Vb5kFvsPWo=
     -----END CERTIFICATE-----
