@@ -1,6 +1,6 @@
 <p align="center"><img src="../images/RRheader2.jpg"></p>
 
-# Robot Raconteur Service Definition Standard
+# Robot Raconteur TCP Transport Standard
 
 Version 0.9.2
 

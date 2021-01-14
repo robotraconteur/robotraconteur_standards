@@ -1,6 +1,6 @@
 <p align="center"><img src="../images/RRheader2.jpg"></p>
 
-# Robot Raconteur Value Types Standard
+# Robot Raconteur Local Transport Standard
 
 http://robotraconteur.com
 
