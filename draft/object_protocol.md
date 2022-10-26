@@ -1544,7 +1544,7 @@ Direction: Either
         * Data: Timespec seconds as int64 scalar
       * Element 2:
         * ElementName: "nanoseconds"
-        * ElementType: 9 (int32)
+        * ElementType: 7 (int32)
         * Data: Timespec nanaseconds as int32 scalar
   * Element 2-:
     * ElementName: "packet"
@@ -1587,7 +1587,7 @@ Direction: Service to Client
         * Data: Timespec seconds as int64 scalar
       * Element 2:
         * ElementName: "nanoseconds"
-        * ElementType: 9 (int32)
+        * ElementType: 7 (int32)
         * Data: Timespec nanaseconds as int32 scalar
   * Element 2-:
     * ElementName: "packet"
@@ -1630,7 +1630,7 @@ Direction: Service to Client
         * Data: Timespec seconds as int64 scalar
       * Element 2:
         * ElementName: "nanoseconds"
-        * ElementType: 9 (int32)
+        * ElementType: 7 (int32)
         * Data: Timespec nanaseconds as int32 scalar
   * Element 2-:
     * ElementName: "packet"
@@ -1662,7 +1662,7 @@ Direction: Client to Service
         * Data: Timespec seconds as int64 scalar
       * Element 2:
         * ElementName: "nanoseconds"
-        * ElementType: 9 (int32)
+        * ElementType: 7 (int32)
         * Data: Timespec nanaseconds as int32 scalar
   * Element 2-:
     * ElementName: "packet"
