@@ -241,7 +241,7 @@ The message element header is defined as:
 | ElementName_len      | uint_x | 1-5    | ELEMENT_NAME_STR | The length of ElementName in bytes after utf-8 encoding |
 | ElementName          | utf-8  | varies | ELEMENT_NAME_STR | The ElementName encoded as utf-8 string |
 | ElementNameCode      | uint_x | 1-5    | ELEMENT_NAME_CODE | String table code for ElementName |
-| ElementNumber        | uint_x | 1-5    | ELEMENT_NUMBER | The number of the element |
+| ElementNumber        | int_x | 1-5    | ELEMENT_NUMBER | The number of the element |
 | ElementType          | uint16 | 2      |     | Data type code for the data |
 | ElementTypeName_len  | uint_x | 1-5    | ELEMENT_TYPE_NAME_STR | The length of ElementTypeName_len in bytes after utf-8 encoding |
 | ElementTypeName      | utf-8  | varies | ELEMENT_TYPE_NAME_STR | The ElementTypeName encoded as utf-8 string |
