@@ -166,7 +166,7 @@ The message header is defined as:
 | MetaData_len         | uint_x | 1-5    | META_INFO     | The length of MetaData in bytes after utf-8 encoding |
 | MetaData             | utf-8  | varies | META_INFO     | MetaData encoded as utf-8 string |
 | MessageID            | uint16 | 2      | META_INFO     | *Unused* |
-| MessageResID         | int16  | 2      | META_INFO     | *Unused* |
+| MessageResID         | uint16  | 2     | META_INFO     | *Unused* |
 | StringTableCount     | uint_x | 1-5    | STRING_TABLE | Number of string table entries |
 | StringTableData      | varies | varies | STRING_TABLE |String table entries, uint_x code, followed by uint_x len, followed uy char8 data. Must be less than 1024 bytes. |
 | EntryCount           | uint_x | 1-5    | MULTIPLE_ENTRIES  | The number of message entries following header. Assume 1 if not included |
